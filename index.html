@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bounser</title>
+    <link href="styles/hamburgers.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/site.css">
 </head>
 <body>
    <header class="column-container">
        <div class="top-menu">
             <div class="container">
+                <button class="hamburger hamburger--squeeze is-active" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
                 <div class="left-controls">
                     <span class="dd">EN</span>
                     <span class="dd">USD</span>
@@ -20,14 +26,15 @@
                         <img src="./img/profile_close_2.svg">
                         <span>My profile</span>
                     </a>
-                    <div class="cart-controls">
+                    <div class="cart-controls flex-vertical-center">
                         <a href="#" class="cart-link flex-vertical-center font-semibold">
                             <img src="./img/bag_3.svg">
                             <span>0 Items</span>
                         </a>
                         <span class="cart-total">$0.00</span>
                     </div>
-                    <img src="./img/search-icon.svg" alt="">
+                    <button id="search-btn">
+                    <img src="./img/search-icon.svg" alt=""></button>
                 </div>
             </div>
        </div>
@@ -61,9 +68,11 @@
                 <div class="prise">$399</div>
                 <img class="card-image" src="./img/pic_small.svg" alt="">
            </a>
-           <a href="#" class="gadget-card">
-                <div class="card-title">Oculus Rift</div>
-                <div class="prise">$349</div>
+           <a href="#" class="gadget-card"> 
+                <div class="flex-gadget-card">
+                    <div class="card-title">Oculus Rift</div>
+                    <div class="prise">$349</div>
+                </div>
                 <img class="card-image" src="./img/Oculus-Rift-profile_grande.svg" alt="">
            </a>
            <a href="#" class="gadget-card"> <div class="card-title">GoPro Hero 6</div>
@@ -181,21 +190,128 @@
                 </div>
                 <div class="test">
                     <div class="name-product">Apple Macbook Pro</div>
-                        <div class="container">
-                            <img class="star-yellow" src="./img/star.svg" alt="">
-                            <img class="star-yellow" src="./img/star.svg" alt="">
-                            <img class="star-yellow" src="./img/star.svg" alt="">
-                            <img class="star-yellow" src="./img/star.svg" alt="">
-                            <img src="./img/star.svg" alt="">
-                        </div>
-                        <div class="prise">
-                            <div class="new-prise">$499</div>
-                            <div class="old-prise">$599</div>
-                        </div>
+                    <div class="container">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img src="./img/star.svg" alt="">
+                    </div>
+                    <div class="prise">
+                        <div class="new-prise">$499</div>
+                        <div class="old-prise">$599</div>
                     </div>
                 </div>
             </div>
-        </div>   
+            <div class="product-center-container">
+                <div class="product-image-container">
+                    <div class="button"><img src="./img/50061505_575246.svg" alt=""></div>
+                    <div class="product-controls">
+                        <button class="like">
+                            <img src="" alt="">
+                        </button>
+                        <button class="add-to-cart">
+                            <img src="" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="test">
+                    <div class="name-product">Apple Macbook Pro</div>
+                    <div class="container">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img src="./img/star.svg" alt="">
+                    </div>
+                    <div class="prise">
+                        <div class="new-prise">$499</div>
+                        <div class="old-prise">$599</div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-center-container">
+                <div class="product-image-container">
+                    <div class="button"><img src="./img/50061505_575246.svg" alt=""></div>
+                    <div class="product-controls">
+                        <button class="like">
+                            <img src="" alt="">
+                        </button>
+                        <button class="add-to-cart">
+                            <img src="" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="test">
+                    <div class="name-product">Apple Macbook Pro</div>
+                    <div class="container">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img src="./img/star.svg" alt="">
+                    </div>
+                    <div class="prise">
+                        <div class="new-prise">$499</div>
+                        <div class="old-prise">$599</div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-center-container">
+                <div class="product-image-container">
+                    <div class="button"><img src="./img/50061505_575246.svg" alt=""></div>
+                    <div class="product-controls">
+                        <button class="like">
+                            <img src="" alt="">
+                        </button>
+                        <button class="add-to-cart">
+                            <img src="" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="test">
+                    <div class="name-product">Apple Macbook Pro</div>
+                    <div class="container">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img src="./img/star.svg" alt="">
+                    </div>
+                    <div class="prise">
+                        <div class="new-prise">$499</div>
+                        <div class="old-prise">$599</div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-center-container">
+                <div class="product-image-container">
+                    <div class="button"><img src="./img/50061505_575246.svg" alt=""></div>
+                    <div class="product-controls">
+                    <button class="like">
+                        <img src="" alt="">
+                    </button>
+                    <button class="add-to-cart">
+                        <img src="" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="test">
+                <div class="name-product">Apple Macbook Pro</div>
+                    <div class="container">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img class="star-yellow" src="./img/star.svg" alt="">
+                        <img src="./img/star.svg" alt="">
+                    </div>
+                    <div class="prise">
+                        <div class="new-prise">$499</div>
+                        <div class="old-prise">$599</div>
+                    </div>
+                </div>
+            </div>
+        </div>  
     </section>
     <script src="site.js"></script>
 </body>

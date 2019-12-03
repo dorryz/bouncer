@@ -1,9 +1,9 @@
 @import 'base';
-header {
-    height: 216px;
-}
+
+$top-menu-height: 48px;
+
 .top-menu {
-    height: 48px;
+    height: $top-menu-height;
     border-bottom: 1px solid #FAFAfb;
     .container {
         display: flex;
@@ -14,6 +14,10 @@ header {
 }
 .top-menu .dd:first-child {
     margin-right: 20px;
+}
+.hamburger {
+    display: none;
+    outline: none;
 }
 .profile-link,
 .cart-link {
@@ -93,6 +97,9 @@ nav {
         font-size: 14px;
         color: white;
         border-bottom: 3px solid white;
+    }
+    @media (max-width: 900px) {
+        overflow: hidden;
     }
 }
 .top-gadgets-section {
@@ -175,6 +182,8 @@ nav {
 }
 .product-best-seller {
     height: 1600px;
+    max-width: 1170px;
+    margin: 0 auto;
 }
 .best-seller-title {
     @extend .font-bold;
@@ -195,8 +204,9 @@ nav {
         
 
         img {
-            width: 100%;
             padding-top: 20px;
+            display: block;
+            margin: 0 auto;
         }
     
         :hover{
@@ -260,5 +270,93 @@ nav {
 }
 .flex-product-container {
     display: flex;
+    justify-content: space-between;
     align-content: space-evenly;
+
+}
+.flex-gadget-card {
+    display: flex;
+    flex: row wrap;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    header {
+        height: $top-menu-height;
+        position: relative;
+    }
+    
+    .top-menu {
+        flex-shrink: 0;
+    }
+
+    .left-controls,
+    .profile-link,
+    #search-btn {
+        display: none;
+    }
+    .logo-and-nav-container {
+        img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 120px;
+        }
+    }
+
+    .rights-controls {
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .cart-controls {
+        margin-right: 10px;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    .cart-link > img {
+        height: 30px;
+        position: absolute;
+        top: 2px;
+        transform: translateX(calc(-100% - 6px));
+        left: 0;
+    }
+
+    .cart-total {
+        margin-left: 0;
+        max-width: 60px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .hamburger {
+        padding: 0;
+        margin-left: 10px;
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        transform: translateY(calc(-50% + 3px));
+    }
+
+    .logo-and-nav-container {
+        padding: 0;
+    }
+
+    nav {
+        flex-direction: column;
+        width: auto;
+        position: absolute;
+        left: 0;
+        top: $top-menu-height;
+        padding: 6px 10px;
+        background-color: #ff48c1f7;
+        transform: translateX(-100%);
+    }
+    
+    .nav-link {
+        font-size: 20px;
+        padding: 6px 0;
+    }
 }
